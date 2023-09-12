@@ -39,6 +39,10 @@ class StackInCard extends LitElement implements LovelaceCard {
     `;
   }
 
+  static getConfigElement() {
+    return document.createElement('hui-stack-card-editor');
+  }
+
   public setConfig(config: StackInCardConfig): void {
     if (!config.cards) {
       throw new Error(`There is no cards parameter defined`);
